@@ -1,0 +1,220 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  padding: 40px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 530px;
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.btn__modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.btn__modal--close {
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn__modal:hover .btn__modal--close,
+.btn__modal:focus .btn__modal--close {
+  fill: $accent-color;
+  cursor: pointer;
+}
+
+/* -----Форма в модалке----- */
+
+.application .title {
+  @media screen and (max-width: 1199px) {
+    line-height: 1.5;
+  }
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $primary-text-color;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 10px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field input:focus {
+  border: 1px solid $accent-color;
+}
+
+.form-field textarea {
+  resize: none;
+  padding: 16px 12px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field textarea:focus {
+  border: 1px solid $accent-color;
+}
+
+.form-field textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  background-image: url(../images/icon-no-check.svg);
+
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-image: url(../images/icon-check.svg);
+}
+
+.contract {
+  padding-left: 4px;
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+
+  fill: #212121;
+}
+
+.form-field input:focus ~ .form-icon {
+  fill: $accent-color;
+}
+
+.form-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-form-application {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+
+  background-color: $accent-color;
+  color: $heading-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-form-application:hover,
+.btn-form-application:focus {
+  background: #188ce8;
+  cursor: pointer;
+}
