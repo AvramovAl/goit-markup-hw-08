@@ -299,6 +299,10 @@ img {
   color: #2196f3;
 }
 
+.mobile__footer {
+  padding-bottom: 10px;
+}
+
 .btn-hero {
   display: inline-block;
   border-radius: 4px;
@@ -696,12 +700,12 @@ img {
   background-color: #f5f4fa;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-top: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -924,9 +928,8 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 60px;
   }
 }
 
@@ -1089,7 +1092,7 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   .projects {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -1110,7 +1113,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .filter__list {
     margin-bottom: 50px;
   }
